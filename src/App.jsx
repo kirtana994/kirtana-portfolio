@@ -30,7 +30,7 @@ function App() {
       <Section id="about" title="About Me" className="about-section">
         <div className="about-layout">
           <div className="about-photo-wrap" aria-label="Profile photo">
-            <img className="about-photo" src="/Profile.jpg" alt="Kirtana profile" />
+          <img className="about-photo" src="/kirtana-portfolio/Profile.jpg" alt="Kirtana profile" />
           </div>
 
           <p>I am a Computer Engineering student focused on building scalable, user-centric web applications. I specialize in the MERN stack (MongoDB, Express.js, React, Node.js) and have a strong foundation in web technologies, backend development, and databases.

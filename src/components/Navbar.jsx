@@ -8,8 +8,8 @@ function Navbar() {
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
-          <a className="resume-link" href="/resume.pdf" download>
-            Download Resume
+          <a className="resume-link" href="/kirtana-portfolio/resume.pdf" download>
+          Download Resume
           </a>
         </li>
       </ul>
