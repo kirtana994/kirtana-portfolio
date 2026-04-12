@@ -1,0 +1,51 @@
+/* skills.css */
+.skills-section {
+  text-align: center;
+  font-size: 0;
+}
+
+.skills-section h2 {
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.25rem, 1.8vw, 1.6rem);
+  line-height: 1.2;
+}
+
+.skill-tag {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.35rem 0.45rem;
+  padding: 0.72rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  color: var(--text-strong);
+  font-size: 0.94rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-4px) scale(1.03);
+  border-color: rgba(34, 211, 238, 0.22);
+  background: linear-gradient(180deg, rgba(34, 211, 238, 0.14), rgba(139, 92, 246, 0.08));
+  box-shadow:
+    0 16px 32px rgba(0, 0, 0, 0.28),
+    0 0 24px rgba(34, 211, 238, 0.12);
+}
+
+@media (max-width: 720px) {
+  .skill-tag {
+    margin: 0.3rem 0.35rem;
+    padding: 0.68rem 0.92rem;
+    font-size: 0.9rem;
+  }
+}
