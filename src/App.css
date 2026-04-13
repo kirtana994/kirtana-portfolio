@@ -186,6 +186,7 @@ section:not(.hero-section):hover {
 .about-section p {
   color: var(--text);
   line-height: 1.8;
+  text-align: justify;
   
 }
 
