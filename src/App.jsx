@@ -12,6 +12,49 @@ import "./styles/button.css";
 import "./styles/skills.css";
 import "./styles/footer.css";
 
+const skillGroups = [
+  {
+    title: "Frontend",
+    icon: "</>",
+    className: "skill-card--frontend",
+    items: [
+      { name: "HTML", glyph: "H5", image: "/kirtana-portfolio/html.webp" },
+      { name: "CSS", glyph: "C3", image: "/kirtana-portfolio/css.png" },
+      { name: "JavaScript", glyph: "JS", image: "/kirtana-portfolio/javascript.png" },
+      { name: "React", glyph: "R", image: "/kirtana-portfolio/react.png" },
+    ],
+  },
+  {
+    title: "Backend",
+    icon: "DB",
+    className: "skill-card--backend",
+    items: [
+      { name: "Node.js", glyph: "N", image: "/kirtana-portfolio/nodejs.png" },
+      { name: "Express.js", glyph: "EX", image: "/kirtana-portfolio/express.png" },
+      { name: "MongoDB", glyph: "MDB", image: "/kirtana-portfolio/mongodb.webp" },
+    ],
+  },
+  {
+    title: "Programming & AI",
+    icon: "AI",
+    className: "skill-card--ai",
+    items: [
+      { name: "Python", glyph: "Py", image: "/kirtana-portfolio/python.png" },
+      { name: "Java", glyph: "J", image: "/kirtana-portfolio/java.webp" },
+      { name: "AI / ML", glyph: "AI", image: "/kirtana-portfolio/aiml.webp" },
+    ],
+  },
+  {
+    title: "Tools",
+    icon: "TO",
+    className: "skill-card--tools",
+    items: [
+      { name: "Git", glyph: "G", image: "/kirtana-portfolio/git.png" },
+      { name: "GitHub", glyph: "GH", image: "/kirtana-portfolio/github.svg" },
+    ],
+  },
+];
+
 function App() {
   return (
     <>
@@ -24,6 +67,10 @@ function App() {
           <span>AI/ML Enthusiast</span>
           <span>Problem Solver</span>
           <span>Aspiring Software Engineer</span>
+        </div>
+        <div className="hero-actions" aria-label="Hero actions">
+          <a className="button button--secondary" href="#projects">View My Work</a>
+          <a className="button" href="#contact">Contact Me</a>
         </div>
       </Section>
 
@@ -39,17 +86,32 @@ I continuously work on strengthening my problem-solving abilities, system design
         </div>
       </Section>
 
-      <Section id="skills" title="Skills" className="skills-section">
-        <Skill name="HTML" />
-        <Skill name="CSS" />
-        <Skill name="JavaScript" />
-        <Skill name="React" />
-        <Skill name="Node.js" />
-        <Skill name="Express.js" />
-        <Skill name="MongoDB" />
-        <Skill name="Python" />
-        <Skill name="AI/ML" />
-        <Skill name="Git" />
+      <Section id="skills" title="Skills & Technologies" className="skills-section">
+        <p className="skills-section__intro">
+          Here are the technologies I work with to build polished, reliable, and user-focused solutions.
+        </p>
+
+        <div className="skills-grid">
+          {skillGroups.map((group) => (
+            <article key={group.title} className={`skill-card ${group.className}`}>
+              <div className="skill-card__header">
+                <span className="skill-card__title">
+                  <span className="skill-card__title-icon" aria-hidden="true">
+                    {group.icon}
+                  </span>
+                  {group.title}
+                </span>
+                <span className="skill-card__rule" aria-hidden="true" />
+              </div>
+
+              <div className="skill-tags">
+                {group.items.map((item) => (
+                  <Skill key={item.name} name={item.name} glyph={item.glyph} image={item.image} />
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
       </Section>
 
       <Section id="projects" title="Projects" className="projects-section">
@@ -82,7 +144,7 @@ I continuously work on strengthening my problem-solving abilities, system design
       </Section>
 
       <Section id="contact" title="Contact" className="contact-section">
-        <p>Email: kirtana.09kichmbare@gmail.com</p>
+        <p>Email: <a href="mailto:kirtana.09kichmbare@gmail.com">kirtana.09kichmbare@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/kirtana-kichmbare-88a8302bb/" target="_blank" rel="noopener noreferrer">linkedin.com/in/kirtana-kichmbare</a></p>
         <p>GitHub: <a href="https://github.com/kirtana994" target="_blank" rel="noopener noreferrer">github.com/kirtanakichmbare</a></p>
 

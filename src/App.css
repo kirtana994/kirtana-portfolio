@@ -27,7 +27,7 @@
   --radius-lg: 22px;
   --radius-md: 16px;
   --radius-sm: 12px;
-  --container: min(1120px, calc(100% - 2rem));
+  --container: min(1440px, calc(100% - 2rem));
 }
 
 * {
