@@ -32,6 +32,7 @@ const skillGroups = [
       { name: "Node.js", glyph: "N", image: "/kirtana-portfolio/nodejs.png" },
       { name: "Express.js", glyph: "EX", image: "/kirtana-portfolio/express.png" },
       { name: "MongoDB", glyph: "MDB", image: "/kirtana-portfolio/mongodb.webp" },
+      {name:"PHP", glyph:"PHP", image:"/kirtana-portfolio/php.png" }
     ],
   },
   {
